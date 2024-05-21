@@ -331,6 +331,8 @@ a#cotizar:hover {
   background-color: #0056b3; /* Cambia el color al pasar el ratón */
 }
 .carousel-item img {
-    width: 100%; /* Ajusta el ancho al 100% del contenedor */
-    height: auto; /* Ajusta automáticamente la altura para mantener la proporción */
+    max-width: 100%; /* Ajusta el ancho máximo al 100% del contenedor */
+    max-height: 100%; /* Ajusta la altura máxima al 100% del contenedor */
+    width: auto; /* Ajusta el ancho automáticamente */
+    height: auto; /* Ajusta la altura automáticamente */
 }
