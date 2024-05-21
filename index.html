@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Espacioed</title>
+    <!-- Agregar enlaces a Bootstrap CSS y JS -->
+    <script src="assets/libs/jquery/jquery-3.3.1.slim.min.js"></script>
+    <script src="assets/libs/jquery/jquery-3.6.4.min.js"></script>
+    <script src="assets/libs/popper/popper.min.js"></script>
+    <script src="assets/libs/bootstrap/bootstrap.min.js"></script>
+    <!---->
+    <script src="assets/libs/sweetalert2/sweetalert2.all.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/scroll-lock/2.1.2/scroll-lock.js"></script> -->
+    <!---->
+    
+    <link rel="stylesheet" href="assets/libs/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" integrity="sha384-4LISF5TTJX/fLmGSxO53rV4miRxdg84mZsxmO8Rx5jGtp/LbrixFETvWa5a6sESd" crossorigin="anonymous">
+
+
+    <link rel="stylesheet" href="assets/libs/animate/animate.min.css">
+    <link rel="stylesheet" href="assets/css/style.css"> 
+    <link rel="icon" href="assets/img/prueba.png" type="image/x-icon" sizes="64x64">
+
+</head>
+<body>
+
+    <!-- Cabecera -->
+    <header class="bg-dark text-white fixed-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <!-- Contenido de la primera columna, por ejemplo, tu marca o logo -->
+                    <a class="navbar-brand" href="#inicio">Espacioed</a>
+                </div>
+                <div class="col-md-5 d-flex justify-content-center">
+                    <!-- Contenido de la segunda columna, por ejemplo, los enlaces de navegación -->
+                    <nav class="navbar navbar-expand-lg navbar-dark">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav">
+                                <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#nosotros">Nosotros</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+                <div class="col-md-4 d-flex justify-content-end">
+                    <!-- Contenido de la tercera columna, por ejemplo, botones o contenido adicional -->
+                    <!-- Agrega aquí el contenido adicional según tus necesidades -->
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Inicio -->
+    <section id="inicio" class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div id="texto-bienvenida" style="background-image: url('assets/img/prueba2.jpg'); background-size: cover; color: white; text-align: left; padding: 200px 20px;">
+                    <div class="col-md-6">
+                        <h1 class="display-4">Bienvenido a nuestro proyecto de arquitectura</h1>
+                        <a id="cotizar" onclick="llamada()">Cotizar ahora <span class="bi bi-phone"></span></a>
+                    </div>
+
+                </div>
+            </div>
+
+  
+        </div>
+
+    </section>
+
+    <!-- Nosotros -->
+    <section id="nosotros" class="container-fluid">
+        <h2 class="display-4">Nosotros</h2>
+        <p>¡Aquí va información sobre nosotros y nuestro trabajo en arquitectura!</p>
+    </section>
+
+    <!-- Servicios -->
+    <section id="servicios" class="container-fluid">
+        <h2 class="display-4">Servicios</h2>
+        <p>Descripción de nuestros servicios arquitectónicos.</p>
+    </section>
+    <section id="FAQ" class="container-fluid">
+        <div class="text-center">
+            <h2 class="display-4">Preguntas frecuentes</h2>
+        </div>
+        <div class="row mx-auto">
+            <div class="col-md-6">
+                <ul class="custom-list-group">
+                    <li class="custom-list-item" onclick="toggleContent('text1')">
+                        Texto 1
+                        <span id="icontext1" class="bi bi-plus"></span>
+                    </li>
+                    <hr>
+                    <div id="text1" class="hidden-text">Texto adicional</div>
+                    <hr id="hrtext1" class="custom-hr">
+                    <div id="text1" class="hidden-text">Texto adicional</div>
+                    <li class="custom-list-item" onclick="toggleContent('text2')">
+                        Texto 2
+                        <span id="icontext2" class="bi bi-plus"></span>
+                    </li>
+                    <hr>
+                    <div id="text2" class="hidden-text">Texto adicional</div>
+                    <hr id="hrtext2" class="custom-hr">
+                    <div id="text2" class="hidden-text">Texto adicional</div>
+                    
+                    <!-- Agrega más elementos según sea necesario -->
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <ul class="custom-list-group">
+                    <li class="custom-list-item" onclick="toggleContent('text3')">
+                        Texto 3
+                        <span id="icontext3" class="bi bi-plus"></span>
+                    </li>
+                    <hr>
+                    <div id="text3" class="hidden-text">Texto adicional</div>
+                    <hr id="hrtext3" class="custom-hr">
+                    <div id="text3" class="hidden-text">Texto adicional</div>
+                    
+                    <li class="custom-list-item" onclick="toggleContent('text4')">
+                        Texto 4
+                        <span id="icontext4" class="bi bi-plus"></span>
+                    </li>
+                    <hr>
+                    <div id="text4" class="hidden-text">Texto adicional</div>
+                    <hr id="hrtext4" class="custom-hr">
+                    <div id="text4" class="hidden-text">Texto adicional</div>
+                    
+                    <!-- Agrega más elementos según sea necesario -->
+                </ul>
+            </div>
+        </div>
+        
+        
+        
+        
+    </section>
+    <!-- Galería de Imágenes -->
+    <section id="galeria" class="container-fluid">
+        <!-- <h2 class="display-4">Galería de Imágenes</h2> -->
+    
+        <div id="carouselExample" class="carousel slide" data-ride="carousel" data-interval="1000">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="assets/img/galeria_imagenes/imagen1.jpg" class="d-block w-100 galeria-image" alt="Imagen 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/img/galeria_imagenes/Imagen2.jpg" class="d-block w-100 galeria-image" alt="Imagen 2">
+                </div>
+                <!-- Agrega más imágenes según sea necesario -->
+            </div>
+    
+            <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Anterior</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExample" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Siguiente</span>
+            </a>
+        </div>
+    </section>
+    
+    
+
+    <!-- Contacto -->
+    <section id="contacto" class="container-fluid">
+        <div id="texto-contacto" style="background-image: url('assets/img/fotoprueba.jpg'); background-size: cover; color: white; text-align: center; padding: 150px 20px;">
+            <h2 class="display-4">Contacto</h2>
+            <!-- Puedes ajustar el contenido adicional según tus necesidades, como subtítulos, etc. -->
+        </div>
+        <div class="row no-gutters">
+            <div class="col-md-4" style="padding: 40px;">
+                <h2 style="font-size: 24px; font-weight: bold;">Diseñamos tu interior a tu gusto</h2>
+                
+                <p>Dirección: Tu Dirección Aquí</p>
+            
+                <ul class="wrapper">
+
+                    <a href="URL_DE_FACEBOOK" target="_blank">
+                        <li class="icon facebook">
+                            <span class="tooltip">Facebook</span>
+                            <span class="bi bi-facebook"></span>
+                          </li>
+                    </a>
+                    <a href="https://www.instagram.com/espacioed.sas/" target="_blank">
+                        <li class="icon instagram">
+                            <span class="tooltip">Instagram</span>
+                            <span class="bi bi-instagram"></span>
+                        </li>
+                    </a>
+                  </ul>
+            </div>
+            <div class="col-md-8" style="padding: 40px;"> 
+                <div>
+                    <form>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <!-- Utilizar clases de Bootstrap para el formulario -->
+                                <div class="form-group">
+                                    <label for="nombre">Nombre:</label>
+                                    <input type="text" class="form-control" id="nombre" name="nombre" required>
+                                </div>
+
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="email">Email:</label>
+                                    <input type="email" class="form-control" id="email" name="email" required>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="telefono">Teléfono:</label>
+                                    <input type="tel" class="form-control" id="telefono" name="telefono">
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="mensaje">Mensaje:</label>
+                                    <textarea class="form-control" id="mensaje" name="mensaje" required></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-9">
+
+                            </div>
+                            <div class="col-md-3 d-flex justify-content-end">
+                                <button type="button" class="btn btn-primary" id="enviarFormulario">Enviar Mensaje</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <div id="scrollButton" onclick="scrollToTop()">↑</div>
+    <div id="chatButton" onclick="toggleChatBox()">  <span class="bi bi-whatsapp"></span>
+    </div>
+    <div id="chatBox">
+        <div id="chatHeader">
+            <span>Envianos un mensaje</span>
+            <span id="closeButton" onclick="cerrarChat()">&#10006;</span> <!-- Este es el símbolo de 'x' para cerrar -->
+        </div>
+        <div id="chatBody">
+            <div class="row">
+                <div class="col-md-12">
+                    <form id="chatForm">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+                        <label for="mensaje">Mensaje:</label>
+                        <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje" required></textarea>
+                        <button type="submit" onclick="iniciarChat()">Iniciar Chat</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <footer class="bg-dark text-white text-center py-3 container-fluid">
+        <p>&copy; <span id="currentYear"></span> Espacioed SAS</p>
+
+    </footer>
+    <script>
+        // Función para desplazarse suavemente entre secciones
+        function scrollToSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Agregar animación de desplazamiento suave a los enlaces de la barra de navegación
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href').substring(1);
+                scrollToSection(targetId);
+            });
+        });
+
+        // Animación de entrada para los elementos al cargar la página
+        document.addEventListener("DOMContentLoaded", function () {
+            const elements = document.querySelectorAll('.container-fluid');
+
+            elements.forEach(element => {
+                element.style.opacity = 0;
+            });
+
+            const fadeIn = (entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.animation = 'fadeIn 1s forwards';
+                        observer.unobserve(entry.target);
+                    }
+                });
+            };
+
+            const observer = new IntersectionObserver(fadeIn, {
+                root: null,
+                threshold: 0.3
+            });
+
+            elements.forEach(element => {
+                observer.observe(element);
+            });
+        });
+        // Cambios en el header al hacer scroll
+        document.addEventListener('scroll', function() {
+            const scrollTop = window.scrollY;
+            const header = document.querySelector('header');
+            const navbar = document.querySelector('.navbar');
+
+            // Ajusta el padding del header y navbar en función del desplazamiento
+            header.style.padding = (scrollTop > 0) ? '5px' : '10px';
+            navbar.style.padding = (scrollTop > 0) ? '10px 20px' : '20px';
+
+            // Cambia la posición de fondo del elemento de parallax
+            const parallaxElement = document.getElementById('texto-contacto');
+            parallaxElement.style.backgroundPositionY = -scrollTop * 0.2 + 'px';
+            // Actualiza el estilo del enlace activo en la barra de navegación
+            document.querySelectorAll('.nav-item').forEach(item => {
+                const sectionId = item.querySelector('a').getAttribute('href').substring(1);
+                const section = document.getElementById(sectionId);
+
+                if (section.offsetTop <= scrollTop && section.offsetTop + section.offsetHeight > scrollTop) {
+                    item.classList.add('active');
+                } else {
+                    item.classList.remove('active');
+                }
+            });
+        });
+        function getCurrentYear() {
+            return new Date().getFullYear();
+        }
+        document.getElementById('currentYear').textContent = getCurrentYear();
+        
+        function toggleContent(contentId) {
+            var contentElement = $('#' + contentId);
+            var hrElement = $('#hr' + contentId);
+            var iconElement = $('#icon' + contentId);
+
+            // Ocultar otros elementos
+            $('.hidden-text').not(contentElement).hide();
+            $('.custom-hr').not(hrElement).hide();
+
+            // Obtener todos los elementos de icono
+            var allIconElements = $('[id^="icon"]');
+
+            // Cambiar el icono de más a menos y viceversa con animación giratoria
+            if (iconElement.hasClass('bi-plus')) {
+                iconElement.removeClass('bi-plus').addClass('bi-dash animate__animated animate__rotateIn');
+
+                // Quitar la clase de animación después de que termine la animación
+                iconElement.one('animationend', function() {
+                    iconElement.removeClass('animate__rotateIn');
+                });
+
+                // Ocultar otros elementos con animación
+                allIconElements.not(iconElement).each(function() {
+                    var otherIconElement = $(this);
+                    if (otherIconElement.hasClass('bi-dash')) {
+                        otherIconElement.removeClass('bi-dash').addClass('bi-plus animate__animated animate__rotateIn');
+
+                        // Quitar la clase de animación después de que termine la animación
+                        otherIconElement.one('animationend', function() {
+                            otherIconElement.removeClass('animate__rotateIn');
+                        });
+                    }
+                });
+            } else {
+                iconElement.removeClass('bi-dash').addClass('bi-plus animate__animated animate__rotateIn');
+
+                // Quitar la clase de animación después de que termine la animación
+                iconElement.one('animationend', function() {
+                    iconElement.removeClass('animate__rotateIn');
+                });
+
+                // Ocultar otros elementos con animación
+                allIconElements.not(iconElement).each(function() {
+                    var otherIconElement = $(this);
+                    if (otherIconElement.hasClass('bi-dash')) {
+                        otherIconElement.removeClass('bi-dash').addClass('bi-plus animate__animated animate__rotateIn');
+
+                        // Quitar la clase de animación después de que termine la animación
+                        otherIconElement.one('animationend', function() {
+                            otherIconElement.removeClass('animate__rotateIn');
+                        });
+                    }
+                });
+            }
+
+            // Mostrar u ocultar el contenido actual
+            contentElement.toggle();
+            hrElement.toggle();
+        }
+
+
+        window.onscroll = function() {
+            scrollFunction();
+        };
+
+        function scrollFunction() {
+            var scrollButton = document.getElementById("scrollButton");
+
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                scrollButton.style.opacity = "1";
+            } else {
+                scrollButton.style.opacity = "0";
+            }
+        }
+
+        function scrollToTop() {
+            // Scroll suave usando animate
+            $("html, body").animate({ scrollTop: 0 }, "slow");
+        }
+        function toggleChatBox() {
+            var chatBox = document.getElementById('chatBox');
+            chatBox.style.display = (chatBox.style.display === 'none' || chatBox.style.display === '') ? 'block' : 'none';
+        }
+
+        function iniciarChat() {
+            var form = document.getElementById('chatForm');
+
+            // Verifica si el formulario es válido (campos requeridos completos)
+            if (form.checkValidity()) {
+                var nombre = form.elements['nombre'].value;
+                var numero = '3126078845';
+                var mensaje = form.elements['mensaje'].value;
+
+                // Forma el enlace de WhatsApp con la información
+                var enlaceWhatsApp = 'https://wa.me/' + numero + '?text=' + encodeURIComponent('Hola, mi nombre es ' + nombre + '. Me gustaría realizar una cotización. ' + mensaje);
+                // Abre WhatsApp en una nueva ventana
+                window.open(enlaceWhatsApp, '_blank');
+
+                // Cierra el recuadro del chat
+                toggleChatBox();
+            }
+             
+        }
+
+        function cerrarChat() {
+            var chatBox = document.getElementById('chatBox');
+            chatBox.style.display = 'none';
+        }
+        function llamada() {
+            const numero= "3126078845";
+            // Formar la URL con el prefijo tel:
+            var urlLlamada = 'tel:' + numero;
+
+            // Crear un enlace temporal y hacer clic en él para iniciar la llamada
+            var enlace = document.createElement('a');
+            enlace.href = urlLlamada;
+            enlace.click();
+        }
+
+        $(document).ready(function () {
+            $('#enviarFormulario').on('click', function () {
+                // Validar los campos requeridos antes de enviar el formulario
+                const nombre = $('#nombre').val();
+                const email = $('#email').val();
+                const telefono = $('#telefono').val();
+                const mensaje = $('#mensaje').val();
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                const bodyScrollLock = window.bodyScrollLock;
+                if(nombre.trim() === ''){
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Oops...',
+                        text: 'Inserte un nombre para continuar'
+                    });
+                    return;
+                }
+
+                if (email.trim() === '') {
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Oops...',
+                        text: 'Inserte un correo para continuar'
+                    });
+                    return;
+                } else if (!emailRegex.test(email)) {
+                    Swal.fire({
+                        icon: 'warning',
+                        title: 'No valido...',
+                        text: 'Inserte un correo válido'
+                    });
+                    return;
+                }
+                if(mensaje.trim() === ''){
+                    Swal.fire({
+                        icon: 'info',
+                        title: 'Oops...',
+                        text: 'Por favor, inserte un mensaje para continuar'
+                    });
+                    return;
+                }
+                var respuestasToSave = {
+                    nombre: nombre,
+                    email : email,
+                    telofono: telefono,
+                    mensaje: mensaje
+                };
+                $.ajax({
+                        url: 'correo/correo.php',
+                        type: 'POST',
+                        data: respuestasToSave,
+                        success: function (response) {
+                            console.log(response);
+                            if(response.message === "OK"){
+                                // Muestra una alerta de éxito con SweetAlert2
+                                // Muestra una alerta de éxito con SweetAlert2
+                                Swal.fire({
+                                    icon: 'success',
+                                    title: 'Datos enviados',
+                                    text: '¡Sus datos han sido enviados correctamente!'
+                                }).then(() => {
+                                    // Limpia los campos del formulario después de enviar los datos
+                                    $('form')[0].reset();
+                                    event.preventDefault();
+                                    // Activa el scroll después de cerrar la alerta
+                                    bodyScrollLock.enableBodyScroll(document.body);
+                                });
+                            }
+
+                        },
+                        error: function (xhr, textStatus, errorThrown) {
+                            console.error('Error en la solicitud AJAX: ' + errorThrown);
+                        }
+                });
+
+            });
+
+        });
+
+    </script>
+    
+</body>
+</html>
